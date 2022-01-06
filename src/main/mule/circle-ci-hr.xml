@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="c36f664a-8698-4c48-a030-ad9fd86d0301" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="circle-ci-hrFlow" doc:id="e0b3d5ec-9502-47a7-84a4-90cf1d1792b0" >
+		<http:listener doc:name="Listener" doc:id="50bc14b8-0a76-49fe-9fc2-bb0c6e8eaa57" config-ref="HTTP_Listener_config" path="/circleci"/>
+		<logger level="INFO" doc:name="Logger" doc:id="5f0804b4-e5bc-4e35-ac71-fa1be0cd012a" message="Entry log for Circle Ci Demo"/>
+		<set-payload value='#[" Hi Hello Circle Ci - Updated once"]' doc:name="Set Payload" doc:id="43968e95-9801-4784-80dd-8c7b931cbe1c" />
+	</flow>
+</mule>
