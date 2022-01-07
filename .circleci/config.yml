@@ -21,7 +21,7 @@ jobs:
             'dev') export environment='Test';;
             esac;
             echo $environment; 
-            mvn deploy -Denvironment=$environment -DmuleDeploy -s settings.xml
+            mvn deploy -DmuleDeploy -s settings.xml
       - save_cache:
           paths:
             - ~/.m2
