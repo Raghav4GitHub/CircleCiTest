@@ -17,7 +17,7 @@ jobs:
       - run: mvn install -s settings.xml
       - run: mvn package -s settings.xml
       - run: case $CIRCLE_BRANCH in
-            'master') export environment='Sandbox';;
+            'main') export environment='Sandbox';;
             'develop') export environment='Test';;
             esac;
             echo $environment; 
