@@ -36,7 +36,7 @@
 						<username>${MULE_USERNAME}</username>
 						<password>${MULE_PASSWORD}</password>
 						<applicationName>circle-ci-hr</applicationName>
-						<environment>Sandbox</environment>
+						<environment>Design</environment>
 						<workerType>MICRO</workerType>
 						<region>us-east-2</region>
 						<workers>1</workers>
