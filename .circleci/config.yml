@@ -17,11 +17,11 @@ jobs:
       - run: mvn install -s settings.xml
       - run: mvn package -s settings.xml
       - run: case $CIRCLE_BRANCH in
-            'main') export environment='Design';;
+            'main') export environment='Test';;
             'dev') export environment='Sandbox';;
             esac;
             echo $environment; 
-            mvn deploy -DmuleDeploy -s settings.xml
+            mvn deploy -Denvironment=$environment -DmuleDeploy -s settings.xml
       - save_cache:
           paths:
             - ~/.m2
