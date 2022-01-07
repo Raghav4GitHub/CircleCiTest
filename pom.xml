@@ -34,7 +34,7 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
 						<username>Raghav4Mulesoft3</username>
-						<password>Raghav4Mulesoft$</password>
+						<password>Raghav4Mulesoft</password>
 						<applicationName>circle-ci-hr</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
